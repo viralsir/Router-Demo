@@ -1,0 +1,10 @@
+<p>registher works!</p>
+<form  [formGroup]="registerfomref" (ngSubmit)="registeruser()">
+  First Name  : <input type="text" formControlName="firstname"> <br/>
+  LastName : <input type="text" formControlName="lastname"> <br/>
+  UserName : <input type="text" formControlName="username"> <br/>
+  Password : <input type="password" formControlName="password"> <br/>
+  <input type="submit" value="Register" [disabled]="registerfomref.invalid">
+  <input type="reset" value="clear">
+
+</form>

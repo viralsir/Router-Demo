@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../user.service";
-import {UserModel} from "../../user-model";
+import {UserModel} from "../user-model";
 import {Router} from "@angular/router";
 
 @Component({
@@ -25,7 +25,7 @@ export class RegistherComponent {
   registeruser(){
 
     let registerdata=this.registerfomref.value;
-    let user=new UserModel(registerdata.firstname,registerdata.lastname,registerdata.username,registerdata.password);
+    let user=new UserModel(registerdata.firstname+"",registerdata.lastname+"",registerdata.username+"",registerdata.password+"");
      if(this.userservice.addUser(user)==true)
      {
        this.router.navigate(["login"])

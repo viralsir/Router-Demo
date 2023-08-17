@@ -1,0 +1,14 @@
+<h1>Questions</h1>
+<form [formGroup]="myForm" (ngSubmit)="checkAnswer()">
+   <div *ngFor="let q of questions" style="text-align: center;">
+       <h3>{{q.question}}</h3>
+     <input type="radio" value="{{q.ans1}}" formControlName="{{q.question}}">{{q.ans1}} <br/>
+     <input type="radio" value="{{q.ans2}}" formControlName="{{q.question}}">{{q.ans2}} <br/>
+     <input type="radio" value="{{q.ans3}}" formControlName="{{q.question}}">{{q.ans3}} <br/>
+     <input type="radio" value="{{q.ans4}}" formControlName="{{q.question}}">{{q.ans4}}    <br/>
+     <br/>
+     <span>{{q.msg}}</span>
+   </div>
+  <br/>
+  <input type="submit" value="Answer"> <input type="reset" value="clear">
+</form>

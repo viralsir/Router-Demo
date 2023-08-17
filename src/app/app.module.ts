@@ -9,6 +9,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { RegistherComponent } from './registher/registher.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegistherComponent } from './registher/registher.component';
     ContactusComponent,
     AboutusComponent,
     DashboardComponent,
-    RegistherComponent
+    RegistherComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
